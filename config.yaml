@@ -1,0 +1,34 @@
+---
+  windows:
+    # You need to specify what monitor you use to play game in fullscreen
+    monitor_width: 1920
+    monitor_height: 1080
+  game:
+    # auto_aim_times: 3
+
+    # Size (in pixels) of the screen capture box to feed the neural net
+    # This box is in the center of your screen, Lower value makes the network faster
+    box_width: 360
+    box_height: 360
+
+    # If enable aimbot or visualizer only
+    enable_aimbot: False
+
+    # 
+    confidence: 0.8 # 0-1
+  application:
+    # Debug mode will output some debug infomation, have runtime cost
+    debug: True
+  nn:
+    # You may not change these labels, unless you train your own network
+    labels:
+      - teamate
+      - enemy
+      - enemy_head
+      - enemy_down
+      - teammate_down
+  proxy: 
+    # if you have network issue with downloading model from torch hub, you can set a http proxy
+    http_proxy: null
+    # example
+    # http_proxy: "http://127.0.0.1:1080"
